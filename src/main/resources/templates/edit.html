@@ -11,8 +11,8 @@
     <title>Spring boot MVC</title>
 </head>
 <body>
-    <div th:replace="fragment/header::header"></div>
-    <div class="container">
+<div th:replace="fragment/header::header"></div>
+<div class="container">
         <span th:if="${ERROR}">
             <div class="alert alert-danger">
                 <strong>Error(s)</strong>
@@ -21,7 +21,7 @@
                 </ul>
             </div>
         </span>
-    <form th:object="${karyawanForm}" method="post" th:action="@{/karyawan/save}">
+    <form th:object="${karyawanForm}" method="post" th:action="@{/karyawan/update}">
         <div class ="form-group">
             <label for="nip">NIP</label>
             <input type="text" class="form-control" th:field="*{NIP}">
@@ -46,10 +46,10 @@
             <label for="address">Address</label>
             <input type="text" class="form-control" th:field="*{address}">
         </div>
-        <button type ="submit" class="btn btn-primary">submit</button>
+        <button type ="submit" class="btn btn-primary">update</button>
     </form>
-    </div>
-    <div th:replace="fragment/footer::footer"></div>
+</div>
+<div th:replace="fragment/footer::footer"></div>
 </body>
 
 </html>
